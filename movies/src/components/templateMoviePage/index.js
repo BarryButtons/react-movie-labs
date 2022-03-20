@@ -5,6 +5,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { getMovieImages } from "../../api/tmdb-api";
 
+
 const TemplateMoviePage = ({ movie, children }) => {
   const [images, setImages] = useState([]);
 
