@@ -21,7 +21,7 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  
+const MovieDetails = ({ movie }) => {  // Don't miss this!
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -91,4 +91,4 @@ const MovieDetails = ({ movie }) => {
       </>
   );
 };
-export default MovieDetails ;
+export default  MovieDetails ;

@@ -20,7 +20,7 @@ const SiteHeader = ({ history }) => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+  
   const navigate = useNavigate();
 
   const menuOptions = [
@@ -31,7 +31,7 @@ const SiteHeader = ({ history }) => {
   ];
 
   const handleMenuSelect = (pageURL) => {
-    navigate(pageURL, { replace: true });
+    navigate(pageURL);
   };
 
   const handleMenu = (event) => {

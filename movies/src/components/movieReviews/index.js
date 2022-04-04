@@ -43,6 +43,7 @@ export default function MovieReviews({ movie }) {
                   state={{
                       review: r,
                       movie: movie,
+                      test: "hello world"
                   }}
                 >
                   Full Review
