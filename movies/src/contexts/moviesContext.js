@@ -22,11 +22,16 @@ const MoviesContextProvider = (props) => {
     }
     setPlaylist(newPlaylist);
   };
-  console.log(playlist);
+ 
 
-  // We will use this function in a later section
   const removeFromFavorites = (movie) => {
     setFavorites( favorites.filter(
+      (mId) => mId !== movie.id
+    ) )
+  };
+
+  const removeFromPlaylist = (movie) => {
+    setFavorites( playlist.filter(
       (mId) => mId !== movie.id
     ) )
   };
@@ -39,9 +44,11 @@ const MoviesContextProvider = (props) => {
     <MoviesContext.Provider
       value={{
         favorites,
+        playlist,
         addToFavorites,
         addToPlaylist,
         removeFromFavorites,
+        removeFromPlaylist,
         addReview,
       }}
     >
