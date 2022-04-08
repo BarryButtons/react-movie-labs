@@ -9,7 +9,7 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
+import img from '../../images/movie.jpg';
 import { getGenres } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
@@ -53,13 +53,13 @@ export default function FilterMoviesCard(props) {
   return (
     <Card 
       sx={{
-        maxWidth: 345,
+        maxWidth: 350,
         backgroundColor: "rgb(0, 0, 255)"
       }} 
       variant="outlined">
       <CardContent>
-        <Typography variant="h5" component="h1">
-          <SearchIcon fontSize="large" />
+        <Typography variant="h5" component="h1" color="white">
+          <SearchIcon fontSize="large" text="ffffff" />
           Filter the movies.
         </Typography>
         <TextField
@@ -89,18 +89,37 @@ export default function FilterMoviesCard(props) {
             })}
           </Select>
         </FormControl>
+
+        {/*<FormControl sx={{...formControl}}>
+          <InputLabel id="genre-label" sx={{padding:1.5}}>Genre</InputLabel>
+          <Select
+            labelId="genre-label"
+            id="genre-select"
+            defaultValue=""
+            value={props.genreFilter}
+            onChange={handleGenreChange}
+          >
+            {genres.map((genre) => {
+              return (
+                <MenuItem key={genre.id} value={genre.id}>
+                  {genre.name}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>*/}
       </CardContent>
       <CardMedia
-        sx={{ height: 300 }}
+        sx={{ height: 350 }}
         image={img}
         title="Filter"
       />
       <CardContent>
-        <Typography variant="h5" component="h1">
+       {/* <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
           Filter the movies.
           <br />
-        </Typography>
+          </Typography>*/}
       </CardContent>
     </Card>
   );
