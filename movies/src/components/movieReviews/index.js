@@ -17,8 +17,9 @@ export default function MovieReviews({ movie }) {
     getMovieReviews(movie.id).then((reviews) => {
       setReviews(reviews);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+  }
+  );
 
   return (
     <TableContainer component={Paper}>
@@ -43,7 +44,7 @@ export default function MovieReviews({ movie }) {
                   state={{
                       review: r,
                       movie: movie,
-                      test: "hello world"
+                      test: "enter text"
                   }}
                 >
                   Full Review
