@@ -15,6 +15,8 @@ import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png';
 import { MoviesContext } from "../../contexts/moviesContext";
 
+
+
 export default function MovieCard({ movie, action }) {
   const { favorites } = useContext(MoviesContext);
 
@@ -35,7 +37,7 @@ export default function MovieCard({ movie, action }) {
           ) : null
         }
         title={
-          <Typography variant="h5" component="p">
+          <Typography align="center" variant="h5" component="p">
             {movie.title}{" "}
           </Typography>
         }
@@ -48,26 +50,29 @@ export default function MovieCard({ movie, action }) {
             : img
         }
       />
-      <CardContent>
+      <CardContent>        
         <Grid container>
           <Grid item xs={6}>
-            <Typography variant="h6" component="p">
+            <Typography fontSize="medium" variant="h6" component="p">
               <CalendarIcon fontSize="small" />
               {movie.release_date}
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="h6" component="p">
+            <Typography fontSize="medium" variant="h6" component="p">
               <StarRateIcon fontSize="small" />
               {"  "} {movie.vote_average}{" "}
             </Typography>
           </Grid>
+
+          
         </Grid>
+        
       </CardContent>
       <CardActions disableSpacing>
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="outlined" size="medium" color="primary" align="center">
             More Info ...
           </Button>
         </Link>

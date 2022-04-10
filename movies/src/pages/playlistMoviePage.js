@@ -19,7 +19,7 @@ const PlaylistMoviesPage = () => {
       };
     })
   );
-  // Check if any of the parallel queries is still loading.
+  
   const isLoading = playlistMovieQueries.find((m) => m.isLoading === true);
 
   if (isLoading) {

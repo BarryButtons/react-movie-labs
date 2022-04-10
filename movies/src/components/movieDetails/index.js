@@ -9,7 +9,8 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews";
-import HomeIcon from "@mui/icons-material/Home";
+//import HomeIcon from "@mui/icons-material/Home";
+import Button from '@mui/material/Button'; 
 
 
 
@@ -61,6 +62,12 @@ const MovieDetails = ({ movie }) => {
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count}`}
         />
+
+<Chip
+          icon={<StarRate />}
+          label={`${movie.vote_average} (${movie.vote_count}`}
+        />
+        
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
       <Paper 
@@ -79,12 +86,22 @@ const MovieDetails = ({ movie }) => {
 
            <Paper sx={{...root}}>
            <a href={movie.homepage}>
-      <HomeIcon fontSize="large" color="primary" />
-         </a>
+           <Button
+                variant="contained"
+                color="primary"
+                target="_blank"
+                text-decoration="none"
+              
+              >
+           Homepage
+              </Button>
+            </a>
+
+              
            </Paper> 
-           
-      
-           
+
+
+                    
       
       <Fab
         color="primary"

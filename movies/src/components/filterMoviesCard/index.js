@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
+//import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import img from '../../images/movie.jpg';
@@ -16,9 +16,10 @@ import Spinner from '../spinner'
 
 const formControl = 
   {
-    margin: 1,
+    
+    margin:.1,
     minWidth: 1,
-    backgroundColor: "rgb(255, 255, 255)"
+    background: "rgb(255, 255, 255)"
   };
 
 export default function FilterMoviesCard(props) {
@@ -58,8 +59,8 @@ export default function FilterMoviesCard(props) {
       }} 
       variant="outlined">
       <CardContent>
-        <Typography variant="h5" component="h1" color="white">
-          <SearchIcon fontSize="large" text="ffffff" />
+        <Typography align="center" variant="h5" component="h1" color="white">
+         
           Filter the movies.
         </Typography>
         <TextField
@@ -90,24 +91,7 @@ export default function FilterMoviesCard(props) {
           </Select>
         </FormControl>
 
-        {/*<FormControl sx={{...formControl}}>
-          <InputLabel id="genre-label" sx={{padding:1.5}}>Genre</InputLabel>
-          <Select
-            labelId="genre-label"
-            id="genre-select"
-            defaultValue=""
-            value={props.genreFilter}
-            onChange={handleGenreChange}
-          >
-            {genres.map((genre) => {
-              return (
-                <MenuItem key={genre.id} value={genre.id}>
-                  {genre.name}
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl>*/}
+        
       </CardContent>
       <CardMedia
         sx={{ height: 350 }}
