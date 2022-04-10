@@ -43,7 +43,7 @@ export default function MovieCard({ movie, action }) {
         }
       />
       <CardMedia
-        sx={{ height: 500 }}
+        sx={{ height: 300 }}
         image={
           movie.poster_path
             ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
@@ -72,8 +72,12 @@ export default function MovieCard({ movie, action }) {
       <CardActions disableSpacing>
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
-          <Button variant="outlined" size="medium" color="primary" align="center">
-            More Info ...
+          <Button 
+                variant="outlined"
+                size="medium" 
+                color="primary" 
+                align="center">
+            More Info
           </Button>
         </Link>
       </CardActions>
