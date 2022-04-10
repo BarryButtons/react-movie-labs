@@ -12,6 +12,7 @@ import MovieReviews from "../movieReviews";
 import HomeIcon from "@mui/icons-material/Home";
 
 
+
 const root = {
     display: "flex",
     justifyContent: "center",
@@ -80,7 +81,10 @@ const MovieDetails = ({ movie }) => {
            <a href={movie.homepage}>
       <HomeIcon fontSize="large" color="primary" />
          </a>
-           </Paper>   
+           </Paper> 
+           
+      
+           
       
       <Fab
         color="primary"
